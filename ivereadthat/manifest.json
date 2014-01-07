@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "朕知道了",
+  "description": "modifies your facebook like button",
+  "version": "1.0",
+
+  "permissions": [
+    "https://www.facebook.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["jquery.min.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["read.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
