@@ -1,11 +1,11 @@
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver
 var observer = new MutationObserver(function(mutations, observer) {
     jQuery(".UFILikeLink").each(function() {
-        if(this.title == "Like this" || this.title == "覺得這很讚") {
-            $(this).children("span").html("朕知道了")
+        if(this.dataset.ft == '{"tn":">"}') {
+            $(this).html("朕知道了")
         }
-        else if(this.title == "Unlike this" || this.title == "收回讚") {
-            $(this).children("span").html("朕也是看報紙才知道")
+        else if(this.dataset.ft == '{"tn":"?"}') {
+            $(this).html("朕也是看報紙才知道")
         }
     })
     jQuery(".uiLinkButtonInput").each(function() {
