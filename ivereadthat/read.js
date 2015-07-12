@@ -8,10 +8,8 @@ var observer = new MutationObserver(function(mutations, observer) {
             $(this).html("朕也是看報紙才知道")
         }
     })
-    jQuery(".uiLinkButtonInput").each(function() {
-        if ( $(this).text() == "Comment" || $(this).text() == "回應" ) {
-			$(this).text("卿家可知？")
-        }
+    jQuery(".comment_link > span").each(function() {
+		$(this).text("卿家可知？")
     })
     jQuery(".share_action_link").each(function() {
         if ($(this).text() == "Share" || $(this).text() == "分享") {
