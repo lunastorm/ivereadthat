@@ -9,8 +9,8 @@ var observer = new MutationObserver(function(mutations, observer) {
         }
     })
     jQuery(".uiLinkButtonInput").each(function() {
-        if (this.value == "Comment" || this.value == "留言") {
-            this.value = "卿家可知？"
+        if ( $(this).text() == "Comment" || $(this).text() == "回應" ) {
+			$(this).text("卿家可知？")
         }
     })
     jQuery(".share_action_link").each(function() {
